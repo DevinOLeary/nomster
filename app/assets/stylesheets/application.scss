@@ -10,6 +10,24 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import "vars";
+@import "layout";
+@import "style";
+
+//base
+body {
+  background: url('/assets/footer_lodyas.png');
+  font-family: 'Nunito';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight:bold;
+}
