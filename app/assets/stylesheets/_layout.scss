@@ -4,3 +4,11 @@
   border-radius:0;
   box-shadow: 0px 5px 3px #2a2a2a;
 }
+.clearfix {
+  clear:both;
+  content:'';
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
