@@ -44,3 +44,9 @@ gem 'rails_12factor', group: :production
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails'
+
+# Pagination
+gem 'kaminari'
+
+# simple form
+gem 'simple_form'
