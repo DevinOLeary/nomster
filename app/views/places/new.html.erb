@@ -1,6 +1,7 @@
+<aside><%= link_to 'Back', root_path, class: 'back' %></aside>
 <div class="place-box col-xs-10 col-xs-offset-1">
   <h1>Let us know about your place</h1>
-  <%= simple_form_for @place do |f|%>
+  <%= simple_form_for @place do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
     <%= f.input :description %>

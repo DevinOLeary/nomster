@@ -50,3 +50,6 @@ gem 'kaminari'
 
 # simple form
 gem 'simple_form'
+
+# User authentication
+gem 'devise', '>= 4.1.1'
