@@ -1,4 +1,7 @@
 //style
+a {
+  color: $inverse;
+}
  .place-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -24,13 +27,15 @@
   }
   .pagination {
     a {
-      color: white;
       font-size: 1.2em;
     }
   }
 .navbar-inverse .navbar-nav li {
   a {
-    color:white;
+    color: $inverse;
     font-size: 1.2em;
   }
+}
+.color-inverse {
+  color: $inverse;
 }
