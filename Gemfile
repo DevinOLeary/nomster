@@ -52,4 +52,4 @@ gem 'kaminari'
 gem 'simple_form'
 
 # User authentication
-gem 'devise', '>= 4.1.1'
+gem 'devise', '>= 3.2.4'
