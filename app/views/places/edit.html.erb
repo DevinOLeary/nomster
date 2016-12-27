@@ -1,0 +1,11 @@
+<h2 class="color-inverse">Edit Your Place</h2>
+<div class="place-box col-xs-10 col-xs-offset-1 main-color">
+
+  <%= simple_form_for @place do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <br />
+    <%= f.submit 'Update', class: 'btn btn-primary' %>
+  <% end %>
+</div>
