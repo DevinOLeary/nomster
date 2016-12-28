@@ -53,3 +53,8 @@ gem 'simple_form'
 
 # User authentication
 gem 'devise', '>= 3.2.4'
+
+# Geocoder
+gem "geocoder", "1.3.4"
+
+gem "figaro", ">= 1.0.0"
