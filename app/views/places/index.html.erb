@@ -2,10 +2,31 @@
   <h1>Welcome to Nomster!</h1>
   <h3>Your one stop spot to find out about the best restaurants around</h3>
 </hgroup>
+<div class="clearfix">
   <% @places.each do |place| %>
     <div class="place-box col-xs-10 col-xs-offset-1">
-      <h2><%= place.name %></h2>
+      <h2><%= link_to place.name, place_path(place) %></h2>
       <i><%= place.address %></i><br/><br/>
-      <p><%= place.description %></p><br />
+      <p><q><%= place.description %></q></p><br />
+      <% if place.user.present? %>
+        <small><%= place.user.email %></small>
+      <% end %>
+      <br />
+      <% if place.comments.present? %>
+      <div class="col-xs-12">
+        <blockquote>
+          <% if place.comments.last.humanized_rating.present? %>
+            <b><%= place.comments.last.humanized_rating %> - </b>
+          <% end %>
+          <br />
+          <p> <%= place.comments.last.message %></p>
+          <small> <%= place.comments.last.user.email %></small>
+        </blockquote>
+      </div>
+      <% end %>
     </div>
   <% end %>
+</div>
+<div class="flex-center">
+  <p class="pagination"><%= paginate @places %></p>
+</div>
