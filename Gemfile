@@ -56,5 +56,7 @@ gem 'devise', '>= 3.2.4'
 
 # Geocoder
 gem "geocoder", "1.3.4"
-
+ # figaro security
 gem "figaro", ">= 1.0.0"
+# photo uploader
+gem 'carrierwave', '~> 1.0'

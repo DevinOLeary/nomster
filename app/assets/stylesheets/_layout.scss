@@ -44,3 +44,15 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
+
+
+.place-details {
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction:row;
+  height:100px;
+  li {
+    margin-left:1em;
+  }
+}
