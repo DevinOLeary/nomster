@@ -24,6 +24,7 @@ class PlacesController < ApplicationController
 # show place when you click on title
   def show
     @place = Place.find(params[:id])
+    @comment = Comment.new
   end
 # brings up a filled out edit form
   def edit
@@ -47,7 +48,7 @@ class PlacesController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
-# Deletes place 
+# Deletes place
   def destroy
     @place = Place.find(params[:id])
     if @place.user != current_user

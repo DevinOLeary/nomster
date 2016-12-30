@@ -1,5 +1,5 @@
 class Place < ActiveRecord::Base
-  belongs_to :users
+  belongs_to :user
   has_many :comments
 
   geocoded_by :address

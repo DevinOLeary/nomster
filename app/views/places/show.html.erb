@@ -27,6 +27,14 @@
      <div id="map"></div>
    <% end %>
  <br/>
+  <%= simple_form_for @comment, url: '#' do |c| %>
+    <%= c.input :message %>
+    <br />
+    <%= c.input :rating %>
+    <br />
+    <%= c.submit "Post your comment", class: "btn btn-primary" %>
+  <% end %>
+
   <div class="pull-right">
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: "btn btn-primary" %>
