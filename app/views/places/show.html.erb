@@ -35,6 +35,16 @@
     <br />
     <%= c.submit "Post your comment", class: "btn btn-primary" %>
   <% end %>
+  <br/>
+  <% @place.comments.each do |comment| %>
+    <div>
+      <blockquote>
+        <b><%= comment.rating %> - </b>
+        <p> <%= comment.message %></p>
+        <small> <%= comment.user.email %></small>
+      </blockquote>
+    </div>
+  <% end %>
 
   <div class="pull-right">
     <% if current_user && current_user == @place.user %>
