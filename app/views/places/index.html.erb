@@ -5,12 +5,21 @@
 <div class="clearfix">
   <% @places.each do |place| %>
     <div class="place-box col-xs-10 col-xs-offset-1">
-      <h2><%= link_to place.name, place_path(place) %></h2>
-      <i><%= place.address %></i><br/><br/>
-      <p><q><%= place.description %></q></p><br />
-      <% if place.user.present? %>
-        <small><%= place.user.email %></small>
-      <% end %>
+        <h2><%= link_to place.name, place_path(place) %></h2>
+        <section class="front-photo pull-right col-sm-6 col-sm-offset-1">
+          <% place.photos.each do |p| %>
+            <figure>
+              <%= image_tag p.picture %>
+            </figure>
+          <% end %>
+        </section>
+      <section class="col-sm-3 col-sm-offset-1 pull-left">
+          <i><%= place.address %></i><br/><br/>
+          <p><q><%= place.description %></q></p><br />
+          <% if place.user.present? %>
+            <small><%= place.user.email %></small>
+          <% end %>
+      </section>
       <br />
       <% if place.comments.present? %>
       <div class="col-xs-12">

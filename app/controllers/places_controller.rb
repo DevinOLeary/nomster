@@ -6,6 +6,7 @@ class PlacesController < ApplicationController
   def index
     @places = Place.all
     @places = Place.order("name").page(params[:page]).per(3)
+    @photo = Photo.new
   end
 # view for new place form
   def new
@@ -25,7 +26,7 @@ class PlacesController < ApplicationController
   def show
     @place = Place.find(params[:id])
     @comment = Comment.new
-    @photo = Photo.new 
+    @photo = Photo.new
   end
 # brings up a filled out edit form
   def edit
