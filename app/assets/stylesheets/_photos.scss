@@ -12,8 +12,35 @@
       margin:1em auto;
   }
 }
-.carousel-inner {
-  img {
-    height:200px;
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    max-height: 550px;
+    min-height: 220px;
+    width:100vw;
+    margin:0 auto;
+}
+
+//Carousel Image Text
+
+.carousel-caption {
+  font-family: 'Cabin Condensed', sans-serif;
+  letter-spacing: 1px;
+  position:absolute;
+  bottom:30%;
+  h1{
+    font-size:62px;
+  }
+  h2 {
+    font-size:42px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carousel-caption {
+    h2 {
+      font-size: 26px;
+    }
+    h1 {
+      font-size:42px;
+    }
   }
 }

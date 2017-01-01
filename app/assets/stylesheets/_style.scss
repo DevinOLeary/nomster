@@ -29,7 +29,13 @@ ul, li {
  }
  .headers {
    color: white;
-   margin:1em 20%;
+   margin:1em 10%;
+   h1 {
+     font-size: 1.8em;
+   }
+   h3 {
+     font-size: 1em;
+   }
  }
  .navbar-inverse .navbar-brand {
    color: $rorange;
@@ -59,4 +65,16 @@ ul, li {
 background-color: #FFEEEE;
 border-radius: 3px;
 padding:8px;
+}
+// media queries
+
+@media screen and (min-width: 700px) {
+  .headers {
+    h1 {
+      font-size: 2.4em;
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+  }
 }
