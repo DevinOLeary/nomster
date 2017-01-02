@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   has_many :places
   has_many :comments
+  has_one :user_picture
 end
