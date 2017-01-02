@@ -17,9 +17,13 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
 }
+.center {
+  text-align:center;
+}
  h2 {
    text-align: center;
-   margin:.5em auto;
+   margin:1em auto;
+
  }
  #map {
 height: 300px;
