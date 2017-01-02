@@ -8,9 +8,10 @@
     </section>
     <section class="col-xs-12 col-sm-6 pull-right">
       <ul class="place-details">
-        <li>Phone Number: </li>
-        <li>Address: </li>
-        <li>Menu: </li>
+        <% @place.each do |p| %>
+        <li>Phone Number: <%= p.phone %></li>
+        <li>Hours: <%= p.hours %></li>
+        <li>Website: <%= p.website %></li>
       </ul>
     </section>
   </header>
