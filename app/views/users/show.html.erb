@@ -1,1 +1,7 @@
-<h2 class="color-inverse">Hello!</h2>
+
+<h2 class="color-inverse">Hello <%= @user.email %>!</h2>
+<div class="place-box">
+  <h3>Thanks for being with us since <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+  <h3><%= @user.comments.count %> Total number of reviews</h3>
+  <h3><%= @user.comments.where(rating: '5_stars').count %> Total number of 5 star ratings</h3>
+</div>
