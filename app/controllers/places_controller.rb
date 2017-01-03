@@ -5,7 +5,7 @@ class PlacesController < ApplicationController
   # View for list of places
   def index
     @places = Place.all
-    @places = Place.order("name").page(params[:page]).per(3)
+    @places = Place.order("name").page(params[:page]).per(5)
     @photo = Photo.new
   end
 # view for new place form
