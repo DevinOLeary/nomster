@@ -5,7 +5,7 @@ class PlacesController < ApplicationController
   # View for list of places
   def index
     @places = Place.all
-    @places = Place.order("name").page(params[:page]).per(3)
+    @places = Place.order("name").page(params[:page]).per(5)
     @photo = Photo.new
   end
 # view for new place form
@@ -14,7 +14,7 @@ class PlacesController < ApplicationController
   end
 # creates new place
   def create
-    @place = current_user.place.create(place_params)
+    @place = current_user.places.create(place_params)
     if @place.valid?
       redirect_to root_path
     else
@@ -63,6 +63,6 @@ class PlacesController < ApplicationController
   private
 
   def place_params
-    params.require(:place).permit(:name, :address, :description)
+    params.require(:place).permit(:name, :address, :description, :phone, :hours, :website)
   end
 end
