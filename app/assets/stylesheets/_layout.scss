@@ -13,17 +13,42 @@ h1, h2, h3, h4, h5, h6 {
   clear:both;
   content:'';
 }
+//flex containers
+.flex {
+  display:flex;
+  flex-direction: column;
+  height:100%;
+}
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+}
 .flex-center {
   display: flex;
   justify-content: center;
 }
+
+.center {
+  text-align:center;
+}
  h2 {
    text-align: center;
-   margin:.5em auto;
+   margin:1em auto;
+
  }
  #map {
 height: 300px;
 margin-bottom:1em;
+}
+
+.dropdown-menu {
+  width:10px;
+  padding-left:1em;
+}
+
+//upload buttons
+.upload {
+  margin:2em .5em;
 }
 
 //block quote style
@@ -46,14 +71,15 @@ blockquote p {
   display: inline;
 }
 
-
+//places page details
+.details-box {
+  height: 300px;
+}
 .place-details {
-  display:flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction:row;
-  height:100px;
   li {
-    margin-left:1em;
+    margin-top: 2em;
   }
+}
+.place-description {
+  margin-top:50px;
 }
