@@ -4,6 +4,9 @@
   <%= simple_form_for @place do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
+    <%= f.input :phone %>
+    <%= f.input :hours %>
+    <%= f.input :website %>
     <%= f.input :description %>
     <br />
     <%= f.submit 'Update', class: 'btn btn-primary' %>
